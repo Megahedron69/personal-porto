@@ -383,7 +383,7 @@ export const CareerTimeline: CareerSkill[] = [
   {
     title: "VDOIT - React Native Developer",
     date: "Oct 2024 - Present",
-    description: "Worked on more than 5 cross-platform applications with two of them deployed on both android and ios stores with inhand experience of setting up and working with technologies like webRTC, websockets, notifications, payment gateways etc",
+    description: "hands-on experience building and delivering more than five cross-platform applications, two of which are successfully published on both the Google Play Store and Apple App Store. These projects involved implementing advanced features such as real-time chat with WebSockets, live video streaming using WebRTC, custom speech-to-text solutions, and fitness data collection in both background and foreground modes. I’ve also worked extensively with silent and push notifications, payment gateways, long polling, and a wide range of third-party SDKs including OneSignal, RevenueCat, and Spike. With strong knowledge of the Apple ecosystem through Xcode, TestFlight, and App Store deployment, I follow clean MVC architecture and SOLID principles to ensure maintainable, scalable, and high-quality code across all my projects.",
   },
 ];
 
