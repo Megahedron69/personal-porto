@@ -381,9 +381,9 @@ export const CareerTimeline: CareerSkill[] = [
       "Developed an advanced authentication system for a new product, which included integrating Oauth along with a custom MFA OTP-based system. Through collaboration with international teams, played a key role in developing and launching a web application using Modern frontend and backend frameworks, where I optimized the codebase and created custom services to enhance performance. Additionally, I worked closely with the CEO, contributing innovative ideas that significantly influenced the app's development.",
   },
   {
-    title: "TCS trainee",
-    date: "Aug 2024 - Present",
-    description: "Currently working in Tata Consultancy services",
+    title: "VDOIT - React Native Developer",
+    date: "Oct 2024 - Present",
+    description: "Worked on more than 5 cross-platform applications with two of them deployed on both android and ios stores with inhand experience of setting up and working with technologies like webRTC, websockets, notifications, payment gateways etc",
   },
 ];
 
