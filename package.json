@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && ./post-build.sh",
+    "build": "vite build && bash ./post-build.sh",
     "lint": "eslint .",
     "preview": "vite preview"
   },
