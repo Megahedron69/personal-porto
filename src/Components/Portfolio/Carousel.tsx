@@ -1,4 +1,4 @@
-import { type FC } from "react";
+import { type FC, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -9,13 +9,14 @@ import "swiper/css/scrollbar";
 import "../../assets/css/CarouselStyles.css";
 import { IonIcon } from "@ionic/react";
 import { chevronBack, chevronForward } from "ionicons/icons";
+import ImageViewer from "./ImageViewer";
 type Props = {
   images: Array<string> | string | undefined;
   isApp: boolean;
 };
 const CustomCarousel: FC<Props> = ({ images, isApp }) => {
-  if (isApp) {
-    const ind = images?.findIndex((item) => item.includes("Cover"));
+  if (isApp && Array.isArray(images)) {
+    const ind = images.findIndex((item) => item.includes("Cover"));
     if (ind !== -1) images.splice(ind, 1);
   }
 
@@ -53,6 +54,15 @@ const CustomCarousel: FC<Props> = ({ images, isApp }) => {
     },
   };
 
+  const [viewerOpen, setViewerOpen] = useState(false);
+  const [viewerSrc, setViewerSrc] = useState<string | null>(null);
+
+  const imgArray: string[] = Array.isArray(images)
+    ? images
+    : typeof images === "string"
+    ? [images]
+    : [];
+
   return (
     <div className="carousel-container">
       <Swiper
@@ -67,7 +77,7 @@ const CustomCarousel: FC<Props> = ({ images, isApp }) => {
         speed={600}
         breakpoints={isApp ? appBreakpoints : webBreakpoints}
       >
-        {images?.map((src: string, index: any) => (
+        {imgArray.map((src: string, index: number) => (
           <SwiperSlide key={index} className="bro">
             <img
               loading="eager"
@@ -82,10 +92,18 @@ const CustomCarousel: FC<Props> = ({ images, isApp }) => {
                     : "vertical"
                 );
               }}
+              onClick={() => {
+                // open viewer
+                setViewerSrc(src);
+                setViewerOpen(true);
+              }}
             />
           </SwiperSlide>
         ))}
       </Swiper>
+      {viewerOpen && viewerSrc && (
+        <ImageViewer src={viewerSrc} onClose={() => setViewerOpen(false)} />
+      )}
       <div className="custom-prev">
         <IonIcon icon={chevronBack} />
       </div>

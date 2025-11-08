@@ -28,6 +28,9 @@ import {
   attenImgs,
   wthrImgs,
   miscellaImgs,
+  mtgImgs,
+  iamImgs,
+  manoImgs,
 } from "./ImportImg";
 
 import {
@@ -35,7 +38,10 @@ import {
   attendexFeatures,
   companFeatures,
   ecosorterFeatures,
+  infiniteFeatures,
+  manoyatraFeatures,
   memoFeatures,
+  mtgFeatures,
   otherFeatures,
   weatherooFeatures,
 } from "./FeatsAndInfo";
@@ -252,6 +258,18 @@ export const skillTree: Skill[] = [
     icon: "devicon-git-plain-wordmark",
   },
   {
+    name: "swift",
+    icon: "devicon-swift-plain",
+  },
+  {
+    name: "kotlin",
+    icon: "devicon-kotlin-plain",
+  },
+  {
+    name: "flutter",
+    icon: "devicon-flutter-plain",
+  },
+  {
     name: "MongoDB",
     icon: "devicon-mongodb-plain-wordmark",
   },
@@ -314,9 +332,13 @@ export const skillTree: Skill[] = [
     icon: "devicon-cloudflare-plain-wordmark",
   },
   {
-    name: "play console",
+    name: "Play console",
     icon: "",
     svgURL: "https://i.imgur.com/BJoddjS.png",
+  },
+  {
+    name: "Xcode",
+    icon: "devicon-xcode-plain",
   },
   {
     name: "Express",
@@ -383,7 +405,8 @@ export const CareerTimeline: CareerSkill[] = [
   {
     title: "VDOIT - React Native Developer",
     date: "Oct 2024 - Present",
-    description: "hands-on experience building and delivering more than five cross-platform applications, two of which are successfully published on both the Google Play Store and Apple App Store. These projects involved implementing advanced features such as real-time chat with WebSockets, live video streaming using WebRTC, custom speech-to-text solutions, and fitness data collection in both background and foreground modes. I’ve also worked extensively with silent and push notifications, payment gateways, long polling, and a wide range of third-party SDKs including OneSignal, RevenueCat, and Spike. With strong knowledge of the Apple ecosystem through Xcode, TestFlight, and App Store deployment, I follow clean MVC architecture and SOLID principles to ensure maintainable, scalable, and high-quality code across all my projects.",
+    description:
+      "hands-on experience building and delivering more than five cross-platform applications, two of which are successfully published on both the Google Play Store and Apple App Store. These projects involved implementing advanced features such as real-time chat with WebSockets, live video streaming using WebRTC, custom speech-to-text solutions, and fitness data collection in both background and foreground modes. I’ve also worked extensively with silent and push notifications, payment gateways, long polling, and a wide range of third-party SDKs including OneSignal, RevenueCat, and Spike. With strong knowledge of the Apple ecosystem through Xcode, TestFlight, and App Store deployment, I follow clean MVC architecture and SOLID principles to ensure maintainable, scalable, and high-quality code across all my projects.",
   },
 ];
 
@@ -490,6 +513,51 @@ export const projectPallete: projectTypes[] = [
     description:
       "Attendex Companion is a powerful mobile app designed to streamline attendance tracking on both Android and iOS. Using advanced technologies like NFC, geofencing, biometric passkeys, and dynamic QR codes, it offers a seamless and secure way for users to log attendance with ease.",
     features: companFeatures,
+  },
+  {
+    name: "Iam Infinite",
+    url: "/Portfolio/Iam",
+    coverImg: CoverNLogo(iamImgs, "Cover"),
+    logo: CoverNLogo(iamImgs, "logo"),
+    imgAlt: "Iam",
+    category: "App Development",
+    gallery: CoverNLogo(iamImgs, "gall"),
+    gitURL: "https://github.com/Megahedron69/WeatherWise",
+    description:
+      "I Am Infinite is an intelligent health and wellness companion that connects your mind, body, and data. Through real-time health tracking, AI-driven insights, and personalized wellness guidance, it empowers you to achieve balance and longevity. Sync your fitness devices, explore detailed analytics, engage with your health personality, and receive curated recommendations, breathing exercises, and expert advice—all within a beautifully designed and holistic experience.",
+    downloadURL:
+      "https://github.com/Megahedron69/apkrepos/releases/download/v1.0/IamInfinite-staging-1.8.apk",
+    features: infiniteFeatures,
+  },
+  {
+    name: "Manoyatra",
+    url: "/Portfolio/Mano",
+    coverImg: CoverNLogo(manoImgs, "Cover"),
+    logo: CoverNLogo(manoImgs, "logo"),
+    imgAlt: "Weather App",
+    category: "App Development",
+    gallery: CoverNLogo(manoImgs, "gall"),
+    gitURL: "https://github.com/Megahedron69",
+    description:
+      "Manoyatra is a mindful companion for mental wellness and spiritual balance. Choose your personal AI assistant, therapist, guru, or friend to guide you through daily reflections, mood check-ins, and meaningful conversations. Powered by intelligent chat and voice interaction, Manoyatra helps you understand your emotions, complete clinical self-tests, and track your mental wellbeing with insightful analytics and reports—all within a serene, beautifully designed interface.",
+    downloadURL:
+      "https://github.com/Megahedron69/apkrepos/releases/download/v1.0/app-release.apk",
+    features: manoyatraFeatures,
+  },
+  {
+    name: "MTG",
+    url: "/Portfolio/MTG",
+    coverImg: CoverNLogo(mtgImgs, "Cover"),
+    logo: CoverNLogo(mtgImgs, "logo"),
+    imgAlt: "MTG App",
+    category: "App Development",
+    gallery: CoverNLogo(mtgImgs, "gall"),
+    gitURL: "https://github.com/Megahedron69/WeatherWise",
+    description:
+      "Master The Greats (MTG) is an immersive trivia and wisdom experience where you engage with 30 legendary masters of knowledge. Play quizzes, earn XP and Wisdom Orbs, unlock achievements, and climb global leaderboards. Chat in real time with lifelike AI avatars powered by WebRTC and streaming technology, all within a beautifully crafted and gamified interface for both iOS and Android.",
+    downloadURL:
+      "https://play.google.com/store/apps/details?id=com.versedigital.mtg",
+    features: mtgFeatures,
   },
   {
     name: "Plant Scan Design",

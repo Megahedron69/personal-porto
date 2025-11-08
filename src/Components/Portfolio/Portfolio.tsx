@@ -112,7 +112,11 @@ const Portfolio: FC = () => {
                     <div className="project-item-icon-box">
                       <IonIcon icon={eyeOutline} />
                     </div>
-                    <img src={item.coverImg} alt={item.imgAlt} loading="lazy" />
+                    <img
+                      src={item.coverImg}
+                      alt={item.imgAlt}
+                      loading="eager"
+                    />
                   </motion.figure>
                   <h3 className="project-title">{item.name}</h3>
                   <p className="project-category">{item.category}</p>

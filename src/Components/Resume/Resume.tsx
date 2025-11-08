@@ -6,10 +6,10 @@ import { rocketOutline, bookOutline, trendingUpOutline } from "ionicons/icons";
 import { skillTree } from "../../Utils/Constants";
 import SkillCategory from "./Skills";
 
-const programmingLanguages = skillTree.slice(0, 12);
-const databaseSkills = skillTree.slice(12, 17);
-const tools = skillTree.slice(17, 28);
-const frameworks = skillTree.slice(28);
+const programmingLanguages = skillTree.slice(0, 15);
+const databaseSkills = skillTree.slice(15, 20);
+const tools = skillTree.slice(20, 32);
+const frameworks = skillTree.slice(32);
 
 const Resume: FC = () => {
   return (

@@ -5,6 +5,10 @@ const compGal = import.meta.glob(
 const ecoGal = import.meta.glob("../assets/images/Ecosorter/*.{png,jpg}");
 const attenGal = import.meta.glob("../assets/images/FinalAttendex/*.{png,jpg}");
 const wthrGal = import.meta.glob("../assets/images/FinalWeather/*.{png,jpg}");
+const mtgGal = import.meta.glob("../assets/images/FinalMTG/*.{png,jpg}");
+const iamGal = import.meta.glob("../assets/images/FinalIam/*.{png,jpg}");
+const manoGal = import.meta.glob("../assets/images/FinalManoyatra/*.{png,jpg}");
+
 const miscellaGal = import.meta.glob(
   "../assets/images/MiscellaFinal/*.{png,jpg}"
 );
@@ -18,19 +22,60 @@ async function collectImages(glob) {
 }
 
 const collectAllImages = async () => {
-  const [memoImgs, compImgs, ecoImgs, attenImgs, wthrImgs, miscellaImgs] =
-    await Promise.all([
-      collectImages(memoGal),
-      collectImages(compGal),
-      collectImages(ecoGal),
-      collectImages(attenGal),
-      collectImages(wthrGal),
-      collectImages(miscellaGal),
-    ]);
+  const [
+    memoImgs,
+    compImgs,
+    ecoImgs,
+    attenImgs,
+    wthrImgs,
+    miscellaImgs,
+    mtgImgs,
+    iamImgs,
+    manoImgs,
+  ] = await Promise.all([
+    collectImages(memoGal),
+    collectImages(compGal),
+    collectImages(ecoGal),
+    collectImages(attenGal),
+    collectImages(wthrGal),
+    collectImages(miscellaGal),
+    collectImages(mtgGal),
+    collectImages(iamGal),
+    collectImages(manoGal),
+  ]);
 
-  return { memoImgs, compImgs, ecoImgs, attenImgs, wthrImgs, miscellaImgs };
+  return {
+    memoImgs,
+    compImgs,
+    ecoImgs,
+    attenImgs,
+    wthrImgs,
+    miscellaImgs,
+    mtgImgs,
+    iamImgs,
+    manoImgs,
+  };
 };
 
-const { memoImgs, compImgs, ecoImgs, attenImgs, wthrImgs, miscellaImgs } =
-  await collectAllImages();
-export { memoImgs, compImgs, ecoImgs, attenImgs, wthrImgs, miscellaImgs };
+const {
+  memoImgs,
+  compImgs,
+  ecoImgs,
+  attenImgs,
+  wthrImgs,
+  miscellaImgs,
+  mtgImgs,
+  iamImgs,
+  manoImgs,
+} = await collectAllImages();
+export {
+  memoImgs,
+  compImgs,
+  ecoImgs,
+  attenImgs,
+  wthrImgs,
+  miscellaImgs,
+  mtgImgs,
+  iamImgs,
+  manoImgs,
+};
